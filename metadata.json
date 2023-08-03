@@ -1,0 +1,21 @@
+{
+    "name": "KhulnaSoft Vul",
+    "provider": "KhulnaSoft Security",
+    "icon": "vul.svg",
+    "vm": {
+        "composefile": "docker-compose.yaml",
+        "exposes": {
+            "socket": "plugin-vul.sock"
+        }
+    },
+    "ui": {
+        "dashboard-tab": {
+            "title": "Vul",
+            "root": "/ui",
+            "src": "index.html",
+            "backend": {
+                "socket": "plugin-vul.sock"
+            }
+        }
+    }
+}
