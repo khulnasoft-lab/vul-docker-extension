@@ -1,0 +1,60 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'vul-dd-metrics
+
+  '
+Globals:
+  Function:
+    Timeout: 5
+Resources:
+  VulAPI:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: dev
+      Cors:
+        AllowMethods: '''POST'''
+        AllowOrigin: '''*'''
+      OpenApiVersion: '2.0'
+      Auth:
+        ApiKeyRequired: false
+  VulDDMetricFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: Vul_DockerDesktop_Metrics
+      CodeUri: VulDDMetricFunction
+      Handler: vul-dd-metrics
+      Runtime: go1.x
+      Architectures:
+      - x86_64
+      Tracing: Active
+      Events:
+        CatchAll:
+          Type: Api
+          Properties:
+            Path: /ddCapture
+            Method: POST
+            RestApiId:
+              Ref: VulAPI
+      Environment:
+        Variables:
+          MEASUREMENT_ID: VALUE
+          API_SECRET: VALUE
+    Metadata:
+      SamResourceId: VulDDMetricFunction
+Outputs:
+  VulDDMetricsAPI:
+    Description: API Gateway endpoint URL for Vul Docker Desktop Metric Gathering
+    Value:
+      Fn::Sub: https://${VulAPI}.execute-api.${AWS::Region}.amazonaws.com/dev/ddcapture/
+  VulDDFunction:
+    Description: Vul Docker Metrics Function
+    Value:
+      Fn::GetAtt:
+      - VulDDMetricFunction
+      - Arn
+  VulDDFunctionIamRole:
+    Description: Implicit IAM Role created for Vul DD Function
+    Value:
+      Fn::GetAtt:
+      - VulDDMetricFunctionRole
+      - Arn
