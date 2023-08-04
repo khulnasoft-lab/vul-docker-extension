@@ -1,1 +1,1 @@
-# trivy-dd-metrics
+# vul-dd-metrics

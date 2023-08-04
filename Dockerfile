@@ -31,7 +31,7 @@ LABEL org.opencontainers.image.title="KhulnaSoft Vul" \
     com.docker.extension.publisher-url="https://vul.dev" \
     com.docker.extension.screenshots="[{\"alt\": \"Vul Dark Screenshot\", \"url\": \"https://raw.githubusercontent.com/khulnasoft-labs/vul-docker-extension/main/.github/images/screenshot.png\"},{\"alt\": \"Vul light screenshot\", \"url\": \"https://raw.githubusercontent.com/khulnasoft-labs/vul-docker-extension/main/.github/images/screenshot_light.png\"}]" \
     com.docker.extension.detailed-description="<h1>Free and Unlimited Vulnerability Scanning</h1><h3>Take control of your application security with Vul</h3>Vul is the world’s most popular open source vulnerability and misconfiguration scanner. It is reliable, fast, extremely easy to use, and it works wherever you need it. <ul><li>Scan locally stored images by choosing from the list</li><li>Scan remote images simply by entering the name in the search box</li><li>Filter by the severity of the vulnerability or optionally only show issues with fixes</li></ul>" \
-    com.docker.extension.additional-urls="[{\"title\":\"Vul Website\",\"url\":\"https://vul.dev/\"},{\"title\":\"Issues\",\"url\":\"https://github.com/khulnasoft-labs/vul/issues\"},{\"title\":\"Slack\",\"url\":\"https://slack.aquasec.com/\"}]" \
+    com.docker.extension.additional-urls="[{\"title\":\"Vul Website\",\"url\":\"https://vul.dev/\"},{\"title\":\"Issues\",\"url\":\"https://github.com/khulnasoft-labs/vul/issues\"},{\"title\":\"Slack\",\"url\":\"https://slack.khulnasoftsec.com/\"}]" \
     com.docker.extension.category="security"
 
 COPY --from=client-builder /app/client/dist ui
