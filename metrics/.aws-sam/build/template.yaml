@@ -45,7 +45,7 @@ Outputs:
   VulDDMetricsAPI:
     Description: API Gateway endpoint URL for Vul Docker Desktop Metric Gathering
     Value:
-      Fn::Sub: https://${VulAPI}.execute-api.${AWS::Region}.amazonaws.com/dev/ddcapture/
+      Fn::Sub: https://${VulAPI}.execute-api.${AWS::Region}.amazonaws.com/dev/ddCapture/
   VulDDFunction:
     Description: Vul Docker Metrics Function
     Value:
