@@ -9,8 +9,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/khulnasoft-labs/vul-docker-extension/service/internal/auth"
-	"github.com/khulnasoft-labs/vul-docker-extension/service/internal/socket"
+	"github.com/khulnasoft-lab/vul-docker-extension/service/internal/auth"
+	"github.com/khulnasoft-lab/vul-docker-extension/service/internal/socket"
 	"github.com/labstack/echo"
 	"github.com/sirupsen/logrus"
 )
