@@ -1,4 +1,4 @@
-module github.com/khulnasoft-labs/vul-dd-metrics
+module github.com/khulnasoft-lab/vul-dd-metrics
 
 go 1.17
 
