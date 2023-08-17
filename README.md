@@ -1,5 +1,5 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/khulnasoft/vul-docker-extension?style=flat-square)
-![Latest Tagged Release](https://img.shields.io/github/v/tag/khulnasoft-labs/vul-docker-extension?style=flat-square)
+![Latest Tagged Release](https://img.shields.io/github/v/tag/khulnasoft-lab/vul-docker-extension?style=flat-square)
 
 # Vul Docker Extension
 
