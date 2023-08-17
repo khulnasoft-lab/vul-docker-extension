@@ -14,7 +14,7 @@ RUN --mount=type=cache,target=/usr/local/share/.cache/yarn-${TARGETARCH} yarn bu
 
 
 # Build the service
-FROM golang:1.17-alpine AS service-builder
+FROM golang:1.21-alpine AS service-builder
 ENV CGO_ENABLED=0
 RUN apk add --update make
 WORKDIR /plugin
