@@ -22,7 +22,7 @@ COPY . .
 RUN make bin
 
 # Bring it all together
-FROM alpine:3.15
+FROM alpine:3.18
 LABEL org.opencontainers.image.title="KhulnaSoft Vul" \
     org.opencontainers.image.description="Run unlimited vulnerability scans against remote or locally stored images. Understand any security issues that may be present in images before you pull and use them." \
     org.opencontainers.image.vendor="KhulnaSoft Security Software" \
